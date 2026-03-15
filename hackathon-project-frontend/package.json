@@ -5,9 +5,7 @@
   "type": "module",
 "scripts": {
   "build": "ng build --configuration production",
-  "mkdir": "mkdir server\\public",
-  "copy": "xcopy dist\\trade-genie-frontend\\* server\\public /E /H /C /I /Y",
-  "postbuild": "npm run build && npm run mkdir && npm run copy",
+  "heroku-postbuild": "npm run build && cpx \"dist/trade-genie-frontend/**/*\" server/public",
   "start": "node server.js"
 },
   "dependencies": {
