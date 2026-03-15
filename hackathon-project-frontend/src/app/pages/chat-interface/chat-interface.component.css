@@ -1,0 +1,122 @@
+/* Chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  max-width: 600px;
+  margin: 2rem auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Chat history */
+.chat-history {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Individual messages */
+.message {
+  max-width: 80%;
+  padding: 0.6rem 1rem;
+  border-radius: 15px;
+  word-wrap: break-word;
+}
+
+/* User messages */
+.message.user {
+  align-self: flex-end;
+  background-color: #3085d6;
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+/* AI messages */
+.message.ai {
+  align-self: flex-start;
+  background-color: #e2e2e2;
+  color: #333;
+  border-bottom-left-radius: 0;
+}
+
+/* Chat input container */
+.chat-input {
+  display: flex;
+  padding: 0.5rem;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  gap: 0.5rem;
+}
+
+/* Textarea input */
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 14px;
+  min-height: 50px;
+  max-height: 100px;
+  outline: none;
+}
+
+/* Send button */
+.chat-input button {
+  background-color: #3085d6;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #2565a8;
+}
+
+/* Scrollbar styling */
+.chat-history::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* Contact Information Section */
+.contact-info {
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-info strong {
+  color: #3085d6;
+}
+
+.contact-info a {
+  color: #3085d6;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

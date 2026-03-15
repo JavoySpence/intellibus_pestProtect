@@ -1,0 +1,36 @@
+<div class="chat-container">
+
+  <div class="chat-history" #chatHistory>
+
+    <div
+      *ngFor="let chat of chats"
+      class="message"
+      [ngClass]="chat.from">
+      {{ chat.message }}
+    </div>
+
+  </div>
+
+  <div class="chat-input">
+
+    <textarea
+      [(ngModel)]="message"
+      (keydown)="handleKeydown($event)"
+      placeholder="Ask about your farm soil...">
+    </textarea>
+
+    <button (click)="sendMessage()">
+      Send
+    </button>
+
+  </div>
+
+  <!-- Contact Information Section -->
+  <div class="contact-info">
+    <p><strong>Need help registering your farm?</strong></p>
+    <p>Please contact us for assistance with adding your farm to our platform.</p>
+    <p>Email: <a href="mailto:support@farmsoil.com">support@farmsoil.com</a></p>
+    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+  </div>
+
+</div>
